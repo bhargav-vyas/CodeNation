@@ -16,6 +16,6 @@ public class ProjectEntity {
 	private String description;
 	private String  language;
 	private String repoitoryUrl;
-	@ManyToOne
-	private Set<Technology> technologies;
+//	@ManyToOne
+//	private Set<Technology> technologies;
 }
