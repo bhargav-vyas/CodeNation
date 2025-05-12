@@ -1,4 +1,4 @@
-package com.tka.entity;
+package com.tka.Entity;
 
 import org.hibernate.mapping.UniqueKey;
 
@@ -9,11 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
-
-@Entity
 @Data
+@Entity
 public class User {
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 	private  String username;
 	@Column(unique = true)
