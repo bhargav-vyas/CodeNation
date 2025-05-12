@@ -13,6 +13,11 @@ public class Contribution {
 	private Long Id;
 	@ManyToOne
 	 private User Contrubution;
+	@ManyToOne
 	 private Project project;
+	private String  description;
+	private  Data contrubution;
+	
+	
 	
 }
