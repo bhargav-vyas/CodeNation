@@ -1,6 +1,5 @@
 package com.tka.Entity;
-
-
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +19,7 @@ public class Contribution {
 	@ManyToOne
 	 private Project project;
 	private String  description;
-	private  Data contrubution;
+	private  String  contrubution;
 	
 	
 	
