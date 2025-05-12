@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class ProjectEntity {
+public class Project {
  
 	private Long id;
 	private  String title;
@@ -16,6 +16,6 @@ public class ProjectEntity {
 	private String description;
 	private String  language;
 	private String repoitoryUrl;
-//	@ManyToOne
-//	private Set<Technology> technologies;
+	@ManyToOne
+	private Set<Technology> technologies;
 }
