@@ -1,5 +1,7 @@
 package com.tka.Controller;
 
+import java.lang.foreign.SymbolLookup;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tka.DTO.UserDto;
 import com.tka.Entity.User;
 import com.tka.Service.UserService;
 
@@ -22,7 +25,15 @@ public class UserController {
 		return ResponseEntity.ok("user resistration sucessful;");
 	}
 	@PostMapping("/login")
-	public User login (@RequestBody)
+	public ResponseEntity<String> login(@RequestBody UserDto userDto) {
+		boolean isLoggeIn = userService.login(userDto);
+		if (isLoggeIn) {
+			return ResponseEntity.ok("Login successful!");
+		}else {
+		return ResponseEntity.status(401).body("Invalid username or password!");
+		}
+
 	
+	}
 
 }
