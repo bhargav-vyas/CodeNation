@@ -21,6 +21,8 @@ public class UserController {
 		userService.resistration(user);
 		return ResponseEntity.ok("user resistration sucessful;");
 	}
+	@PostMapping("/login")
+	public User login (@RequestBody)
 	
 
 }
