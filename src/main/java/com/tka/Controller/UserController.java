@@ -16,7 +16,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping
+	@PostMapping("/resister")
 	 public ResponseEntity<String>  resistration(@RequestBody User user){
 		userService.resistration(user);
 		return ResponseEntity.ok("user resistration sucessful;");
