@@ -20,5 +20,9 @@ public class UserService {
 
 	public boolean login(UserDto userDto) {
 		return false;
+	}
+
+	public User getuserByid(Long id) {
+		return userRepository.getById(id);
 	}	
 }
