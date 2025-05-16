@@ -11,21 +11,19 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 public class SecuurityConfig {
-	 @Bean
+	    @Bean
 	    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	        http
-	            .csrf(csrf -> csrf.disable())
-	            .authorizeHttpRequests(auth -> auth
-	                .requestMatchers(
-	                    "/api/users/resister",  // Allow registration
-	                    "/api/users/login",     // Allow login
-	                    "/api/public/**"        // Any other public APIs
-	                ).permitAll()
-	                .anyRequest().authenticated()  // All other APIs require authentication
-	            )
-	            .httpBasic(); // You can also use .formLogin() if needed
+	            .csrf().disable()
+	            .authorizeHttpRequests()
+	                .requestMatchers("/resister").permitAll()
+	                .anyRequest().authenticated()
+	            .and()
+	            .httpBasic(); // or formLogin(), based on your use case
 
 	        return http.build();
+	    }
+	}
 	    }
 
 	    @Bean
