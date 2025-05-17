@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 
 public class UserDto {
 	private  Long id;
+	 @Size(min = 2, max = 50, message = "Name must be between 2-50 characters")
 	private  String username;
 	private String email;
 	private String  password;
