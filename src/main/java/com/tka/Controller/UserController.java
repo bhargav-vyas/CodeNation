@@ -1,6 +1,8 @@
 package com.tka.Controller;
 
 
+import java.lang.classfile.ClassFile.Option;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +45,13 @@ public class UserController {
 		 }
 	 @PutMapping("/updateBy/{id}")
 	 public ResponseEntity<String> UpdateById(@PathVariable Long id, @RequestBody UserDto userdto){
-		return null;
+		 String result = userService.updateUserById(id, userdto);
+
+	        if (result.contains("not found")) {
+	            return ResponseEntity.status(404).body(result);
+	        } else {
+	            return ResponseEntity.ok(result);
+	        }
 		 
 	 }
 	 

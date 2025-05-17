@@ -24,5 +24,10 @@ public class UserService {
 
 	public User getuserByid(Long id) {
 		return userRepository.getById(id);
+	}
+
+	public String updateUserById(Long id, UserDto userdto) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
