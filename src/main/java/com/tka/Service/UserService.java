@@ -35,8 +35,10 @@ public class UserService {
 			user.setUsername(userdto.getUsername());
 			user.setPassword(userdto.getPassword());
 			user.setEmail(user.getEmail());
-			
+			userRepository.save(user);
+			return "user update succesfully";
+		}else {
+			return "User not found with Id " + id ;
 		}
-		return null;
 	}	
 }
