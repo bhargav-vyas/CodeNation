@@ -14,6 +14,8 @@ import com.tka.DTO.UserDto;
 import com.tka.Entity.User;
 import com.tka.Service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/auth")
 public class UserController {
@@ -39,7 +41,11 @@ public class UserController {
 		 User user = userService.getuserByid(id);
 		 return ResponseEntity.ok("get by id sucessful");
 		 }
-	 @PutMapping
+	 @PutMapping("/updateBy/{id}")
+	 public ResponseEntity<String> UpdateById(@PathVariable Long id, @RequestBody UserDto userdto){
+		return null;
+		 
+	 }
 	 
 
 }
