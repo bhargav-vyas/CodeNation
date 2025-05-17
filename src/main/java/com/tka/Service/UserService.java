@@ -1,5 +1,7 @@
 package com.tka.Service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +29,14 @@ public class UserService {
 	}
 
 	public String updateUserById(Long id, UserDto userdto) {
-		// TODO Auto-generated method stub
+		Optional<User> optionalUser =userRepository.findById(id);
+		if (optionalUser.isPresent()) {
+			User user =optionalUser.get();
+			user.setUsername(userdto.getUsername());
+			user.setPassword(userdto.getPassword());
+			user.setEmail(user.getEmail());
+			
+		}
 		return null;
 	}	
 }
