@@ -1,8 +1,4 @@
 package com.tka.Controller;
-
-
-import java.lang.classfile.ClassFile.Option;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tka.DTO.UserDto;
 import com.tka.Entity.User;
 import com.tka.Service.UserService;
-
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/auth")
