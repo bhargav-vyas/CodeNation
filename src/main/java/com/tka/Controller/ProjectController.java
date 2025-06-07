@@ -1,5 +1,7 @@
 package com.tka.Controller;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +19,9 @@ public class ProjectController {
 	private ProjectService projectService;
 	@PostMapping("/add")
 	public  String addProject(@RequestBody Project project) {
-		project.setCreatedDate(null)
+        project.setCreatedDate(LocalDate.now());
+        projectService.addProject(project);
+        return "project added sucessful";
 		
 	}
 }
