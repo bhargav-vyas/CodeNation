@@ -16,12 +16,12 @@ import com.tka.Service.ProjectService;
 public class ProjectController {
 
 	@Autowired
-//	private ProjectService projectService;
-//	@PostMapping("/add")
-//	public  String addProject(@RequestBody Project project) {
-//        project.setCreatedDate(LocalDate.now());
-//        projectService.addProject(project);
-//        return "project added sucessful";
-//		
-//	}
+	private ProjectService projectService;
+	@PostMapping("/add")
+	public  String addProject(@RequestBody Project project) {
+        project.setCreatedDate(LocalDate.now());
+        projectService.addProject(project);
+        return "project added sucessful";
+		
+	}
 }
