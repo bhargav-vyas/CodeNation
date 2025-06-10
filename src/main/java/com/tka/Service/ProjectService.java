@@ -12,7 +12,7 @@ public class ProjectService {
   private ProjectReporisetory projectReporisetory;
 
 	public void addProject(Project project) {
-		projectService.save(project);
+		projectReporisetory.save(project);
 		
 	}
 
