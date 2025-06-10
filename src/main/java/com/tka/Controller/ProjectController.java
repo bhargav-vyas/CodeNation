@@ -3,6 +3,7 @@ package com.tka.Controller;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,4 +25,9 @@ public class ProjectController {
         return "project added sucessful";
 		
 	}
+	 @DeleteMapping("/delet")
+	 public String deletproject() {
+		 projectService.delet()
+	 }
+	 
 }
