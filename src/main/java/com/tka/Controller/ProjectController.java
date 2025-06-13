@@ -3,6 +3,7 @@ package com.tka.Controller;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,7 +28,7 @@ public class ProjectController {
 		
 	}
 	 @DeleteMapping("/delet/{id}")
-	 public String deletproject(@PathVariable Long id) {
+	 public ResponseEntity<String> deletproject(@PathVariable Long id) {
 		return projectService.delet(id);
 	 }
 	 

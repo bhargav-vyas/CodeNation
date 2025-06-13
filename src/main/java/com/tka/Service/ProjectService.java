@@ -1,6 +1,7 @@
 package com.tka.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.tka.Entity.Project;
@@ -16,7 +17,7 @@ public class ProjectService {
 		
 	}
 
-	public String delet(Long id) {	
+	public ResponseEntity<String> delet(Long id) {	
 		return projectReporisetory.deleteById(id);
 	}
 
