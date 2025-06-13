@@ -17,8 +17,9 @@ public class ProjectService {
 		
 	}
 
-	public ResponseEntity<String> delet(Long id) {	
-		return projectReporisetory.deleteById(id);
+	public String delet(Long id) {	
+		projectReporisetory.deleteById(id);
+		return "deleted scussfully";
 	}
 
 	
