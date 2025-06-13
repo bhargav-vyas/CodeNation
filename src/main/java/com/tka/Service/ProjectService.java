@@ -16,6 +16,10 @@ public class ProjectService {
 		
 	}
 
+	public void delet(Long id) {	
+		projectReporisetory.deleteById(id);
+	}
+
 	
 
 }
