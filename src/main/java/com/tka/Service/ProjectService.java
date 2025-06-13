@@ -16,8 +16,8 @@ public class ProjectService {
 		
 	}
 
-	public void delet(Long id) {	
-		projectReporisetory.deleteById(id);
+	public String delet(Long id) {	
+		return projectReporisetory.deleteById(id);
 	}
 
 	
