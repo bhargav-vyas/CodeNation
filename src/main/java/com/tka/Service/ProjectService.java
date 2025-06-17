@@ -23,8 +23,8 @@ public class ProjectService {
 		return "deleted scussfully";
 	}
 
-	public Project getuserByid(Long id) {
-		return projectReporisetory.getById(id);
+	public User getuserByid(Long id) {
+		return projeRepository.getById(id);
 	}
 
 	
