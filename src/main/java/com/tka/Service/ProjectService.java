@@ -23,9 +23,8 @@ public class ProjectService {
 		return "deleted scussfully";
 	}
 
-	public static User getuserByid(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Project getuserByid(Long id) {
+		return projectReporisetory.getById(id);
 	}
 
 	
