@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.tka.Entity.Project;
+import com.tka.Entity.User;
 import com.tka.Reporisetory.ProjectReporisetory;
 
 @Service
@@ -20,6 +21,11 @@ public class ProjectService {
 	public String delet(Long id) {	
 		projectReporisetory.deleteById(id);
 		return "deleted scussfully";
+	}
+
+	public static User getuserByid(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
