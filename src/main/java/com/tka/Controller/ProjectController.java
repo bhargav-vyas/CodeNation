@@ -27,9 +27,9 @@ public class ProjectController {
         return "project added sucessful";
 		
 	}
-	 @DeleteMapping("/delet/{id}")
-	 public String deletproject(@PathVariable Long id) {
-		return projectService.delet(id);
-	 }
+//	 @DeleteMapping("/delet/{id}")
+//	 public String deletproject(@PathVariable Long id) {
+//		return projectService.delet(id);
+//	 }
 	 
 }
