@@ -34,9 +34,8 @@ public class ProjectController {
 		return projectService.delet(id);
 	 }
 	 @GetMapping("/{id}")
-	 public ResponseEntity<String> getuserById(@PathVariable Long id){
-		 User user = ProjectService.getuserByid(id);
-		 return ResponseEntity.ok("get by id sucessful");
+	 public Project getuserById(@PathVariable Long id){
+		 return ProjectService.getuserByid(id);
 		 }
 	 
 }
